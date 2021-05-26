@@ -14,7 +14,6 @@ const initialState = {
 };
 
 const taskListReducers = (state = initialState, action) => {
-    debugger
     switch (action.type) {
 
         case TASK_LIST_DATA: {
@@ -23,7 +22,6 @@ const taskListReducers = (state = initialState, action) => {
                 taskListData: [...action.taskListDataFromBackEnd],
                 totalTaskCount: action.totalTaskCount
             };
-            debugger
             return superState;
         }
 

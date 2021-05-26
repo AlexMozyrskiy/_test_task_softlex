@@ -20,11 +20,11 @@ export const api = {
                 return response;
             });
     },
-    setTask(devName = developerName) {
+    setTask(username, email, text, devName = developerName) {
         const formData = new FormData();
-        formData.append("username", "Fred");
-        formData.append("email", "fred@example.com");
-        formData.append("text", "Some test text #1");
+        formData.append("username", username);
+        formData.append("email", email);
+        formData.append("text", text);
         debugger
         return axiosInstance.post(`/create?developer=${devName}`, formData, {
             headers: {
