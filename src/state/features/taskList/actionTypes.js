@@ -1,0 +1,1 @@
+export const TASK_LIST_DATA = 'ps-report/taskList/TASK_LIST_DATA';  // список из 3х задач, согласно тестовому заданию
