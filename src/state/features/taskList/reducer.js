@@ -10,17 +10,20 @@ const initialState = {
         text: "",
         status: null
     }],
+    totalTaskCount: 0
 };
 
 const taskListReducers = (state = initialState, action) => {
+    debugger
     switch (action.type) {
 
         case TASK_LIST_DATA: {
             const superState = {
                 ...state,
-                taskListData: [...action.taskListDataFromBackEnd]
-
+                taskListData: [...action.taskListDataFromBackEnd],
+                totalTaskCount: action.totalTaskCount
             };
+            debugger
             return superState;
         }
 

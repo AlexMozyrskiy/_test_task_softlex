@@ -3,9 +3,11 @@ import {
 } from "./actionTypes";
 
 /* сетаем в стейт полученный с бекенда список задач */
-export const setTaskListDataActionCreator = ( taskListDataFromBackEnd ) => {
+export const setTaskListDataActionCreator = ( taskListDataFromBackEnd, totalTaskCount ) => {
+    debugger
     return {
         type: TASK_LIST_DATA,
-        taskListDataFromBackEnd
+        taskListDataFromBackEnd,
+        totalTaskCount
     }
 };
