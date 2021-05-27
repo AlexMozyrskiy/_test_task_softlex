@@ -1,1 +1,3 @@
 export const TASK_LIST_DATA = 'ps-report/taskList/TASK_LIST_DATA';  // список из 3х задач, согласно тестовому заданию
+// export const SET_ONE_TASK = 'ps-report/taskList/SET_ONE_TASK';  // в случае успешной передачи новой таски на сервер сетаем в стейт
+export const IS_MODAL_WINDOW_CREATE_TASK_ACTIVE = 'ps-report/taskList/IS_MODAL_WINDOWcREATE_TASK_ACTIVE';  // активно ли модальное окно создание новой таски

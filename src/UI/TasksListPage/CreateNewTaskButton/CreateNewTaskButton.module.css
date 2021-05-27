@@ -1,0 +1,19 @@
+.task_list_new_task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 250px;
+    height: 150px;
+    background-color: #FAFAFA;
+    border: dashed 3px #1890FF;
+    border-radius: 10px;
+    color: #1890FF;
+    transition: .5s;
+}
+
+.task_list_new_task:hover {
+    cursor: pointer;
+    box-shadow: 10px 0 15px rgba(0,0,0,0.5);
+    transition: .5s;
+}

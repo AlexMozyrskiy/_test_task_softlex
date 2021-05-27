@@ -12,7 +12,7 @@ const { Content, Footer } = Layout;
 export const App = () => {
   const dispath = useDispatch();
   useEffect(() => {
-    // dispath(setTaskListThunkCreator())
+    dispath(setTaskListThunkCreator())
   });
 
   return (
@@ -26,8 +26,6 @@ export const App = () => {
             <Route exact path='/' render={() => <TasksListPage />} />
           </Switch>
         </Content>
-
-        <Footer>Footer</Footer>
 
       </Layout>
     </div>

@@ -1,5 +1,6 @@
 import {
-    TASK_LIST_DATA
+    TASK_LIST_DATA, IS_MODAL_WINDOW_CREATE_TASK_ACTIVE,
+    SET_ONE_TASK
 } from "./actionTypes";
 
 const initialState = {
@@ -10,7 +11,8 @@ const initialState = {
         text: "",
         status: null
     }],
-    totalTaskCount: 1
+    totalTaskCount: 1,
+    isModalWindowCreateTaskActive: false
 };
 
 const taskListReducers = (state = initialState, action) => {
@@ -20,7 +22,25 @@ const taskListReducers = (state = initialState, action) => {
             const superState = {
                 ...state,
                 taskListData: [...action.taskListDataFromBackEnd],
-                totalTaskCount: action.totalTaskCount
+                totalTaskCount: +action.totalTaskCount
+            };
+            return superState;
+        }
+
+        // case SET_ONE_TASK: {
+        //     const superState = {
+        //         ...state,
+        //         taskListData: [action.newTask, ...state.taskListData],
+        //         totalTaskCount: state.totalTaskCount + 1
+        //     };
+        //     debugger
+        //     return superState;
+        // }
+
+        case IS_MODAL_WINDOW_CREATE_TASK_ACTIVE: {
+            const superState = {
+                ...state,
+                isModalWindowCreateTaskActive: action.isModalWindowCreateTaskActive
             };
             return superState;
         }
