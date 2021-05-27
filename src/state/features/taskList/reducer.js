@@ -10,7 +10,7 @@ const initialState = {
         text: "",
         status: null
     }],
-    totalTaskCount: 0
+    totalTaskCount: 1
 };
 
 const taskListReducers = (state = initialState, action) => {

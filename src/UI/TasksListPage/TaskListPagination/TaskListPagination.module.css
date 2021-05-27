@@ -1,0 +1,30 @@
+.task_list__pagination-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.task_list__pagination{
+	display: flex;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.task_list__pagination-single-span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 37px;
+	height: 37px;
+	border: solid 1px #1e70a9;
+}
+.task_list__pagination-single-span:hover {
+	cursor: pointer;
+}
+.task_list__pagination-single-span:not(:last-child) {
+	margin-right: 5px;
+}
+.task_list__pagination-single-span_active {
+	color: #fff;
+	background-color: #1e70a9;
+}
