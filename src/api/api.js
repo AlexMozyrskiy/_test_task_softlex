@@ -15,8 +15,9 @@ const developerName = "AlexMozyrskiy";
 
 export const api = {
     getTasks(page = 1, sort_field = "id", sort_direction = "asc", devName = developerName) {
-        return axiosInstance.get(`?developer=${devName}&page=${page}&sort_field =${sort_field}$sort_direction=${sort_direction}`)
+        return axiosInstance.get(`?developer=${devName}&page=${page}&sort_field=${sort_field}&sort_direction=${sort_direction}`)
             .then(response => {
+                debugger
                 return response;
             });
     },
@@ -25,7 +26,6 @@ export const api = {
         formData.append("username", username);
         formData.append("email", email);
         formData.append("text", text);
-        debugger
         return axiosInstance.post(`/create?developer=${devName}`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data"

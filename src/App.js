@@ -7,12 +7,12 @@ import { Layout } from 'antd';
 import { MyHeader } from './UI/MyHeader/MyHeader';
 import { TasksListPage } from './UI/TasksListPage/TasksListPage';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 export const App = () => {
   const dispath = useDispatch();
   useEffect(() => {
-    dispath(setTaskListThunkCreator())
+    dispath(setTaskListThunkCreator(3, "id", "asc"))
   });
 
   return (

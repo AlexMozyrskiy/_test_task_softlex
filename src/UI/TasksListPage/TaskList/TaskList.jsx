@@ -8,14 +8,13 @@ import styles from "./TaskList.module.css";
 export const TaskList = () => {
 
     // ----------------------- Hoocks ------------------------------
-    const dispatch = useDispatch();
     const taskList = useSelector(selectTaskListData);
     // / ----------------------- Hoocks ----------------------------
 
-    // список таксков jsx
+    // список тасков jsx
     const taskListJSX = taskList.map(item => {
         return (
-            <li>
+            <li key={item.id}>
                 <div>Task Number: {item.id}</div>
                 <div>Name: {item.username}</div>
                 <div>Email: {item.email}</div>

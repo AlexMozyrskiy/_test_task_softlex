@@ -10,3 +10,7 @@ export const selectIsModalWindowCreateTaskActive = (state) => {
     return state.taskList.isModalWindowCreateTaskActive;
 }
 
+export const selectIsTasksLoaded = (state) => {
+    return state.taskList.isTasksLoaded;
+}
+

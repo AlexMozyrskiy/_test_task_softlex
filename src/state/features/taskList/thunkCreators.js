@@ -5,8 +5,8 @@ import { api } from "../../../api/api";
 
 
 // санка делает запрос на бэк и сетает в стейт таски полученные от сервера
-export const setTaskListThunkCreator = () => async (dispatch) => {
-    const dataFromBackEnd = await api.getTasks();       // запрос на сервер за тасками
+export const setTaskListThunkCreator = (page, sort_field, sort_direction) => async (dispatch) => {
+    const dataFromBackEnd = await api.getTasks(page, sort_field, sort_direction);       // запрос на сервер за тасками
     if (dataFromBackEnd.data.status === "ok") {         // если ответ от сервера успешен
         if (dataFromBackEnd.data.message.tasks.length) {       // если таски есть
             dispatch(setTaskListDataActionCreator(dataFromBackEnd.data.message.tasks, dataFromBackEnd.data.message.total_task_count)); // задиспатчим таски в стейт

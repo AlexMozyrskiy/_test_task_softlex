@@ -13,7 +13,6 @@ export const ModalWindowForm = () => {
 
     const onFinish = (values) => {
         const {username, email, text} = {...values}
-        debugger
         setIsButtonLoadingActive(true);                                 // включаем лоадер на кнопке
         dispatch(createNewTaskThunkCreator(username, email, text));     // посылаем на сервер новую таску и в случае положтельного ответа от сервера сетаем ее встейт
         setIsButtonLoadingActive(false);                                // отключаем лоадер на кнопке
