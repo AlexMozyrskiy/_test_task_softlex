@@ -14,3 +14,15 @@ export const selectIsTasksLoaded = (state) => {
     return state.taskList.isTasksLoaded;
 }
 
+export const selectSortByParameter = (state) => {
+    return state.taskList.sortByParameter;
+}
+
+export const selectSortByOrder = (state) => {
+    return state.taskList.sortByOrder;
+}
+
+export const selectCurrentPage = (state) => {
+    return state.taskList.currentPage;
+}
+

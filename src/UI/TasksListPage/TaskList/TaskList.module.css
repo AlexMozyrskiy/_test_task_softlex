@@ -1,6 +1,8 @@
 .task_list_wrapper {
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .task_list_wrapper ul {

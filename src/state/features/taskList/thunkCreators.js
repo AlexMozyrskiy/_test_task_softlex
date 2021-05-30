@@ -1,5 +1,5 @@
 import {
-    setTaskListDataActionCreator/*, setOneTaskActionCreator */
+    setTaskListDataActionCreator, setIsTasksLoadedActionCreator
 } from "./actionCreators";
 import { api } from "../../../api/api";
 
@@ -10,6 +10,7 @@ export const setTaskListThunkCreator = (page, sort_field, sort_direction) => asy
     if (dataFromBackEnd.data.status === "ok") {         // если ответ от сервера успешен
         if (dataFromBackEnd.data.message.tasks.length) {       // если таски есть
             dispatch(setTaskListDataActionCreator(dataFromBackEnd.data.message.tasks, dataFromBackEnd.data.message.total_task_count)); // задиспатчим таски в стейт
+            dispatch(setIsTasksLoadedActionCreator(true));                                                                              // задиспачим, что загрузили таски в стейт
         }
     }
 }

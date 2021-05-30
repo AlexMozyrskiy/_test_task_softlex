@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { CreateNewTaskButton } from "../CreateNewTaskButton/CreateNewTaskButton";
 import { ModalWindow } from "../ModalWindow/ModalWindow";
 import { selectTaskListData } from "../../../state/features/taskList/selectors";
@@ -11,10 +11,10 @@ export const TaskList = () => {
     const taskList = useSelector(selectTaskListData);
     // / ----------------------- Hoocks ----------------------------
 
-    // список тасков jsx
+    // список таксков jsx
     const taskListJSX = taskList.map(item => {
         return (
-            <li key={item.id}>
+            <li>
                 <div>Task Number: {item.id}</div>
                 <div>Name: {item.username}</div>
                 <div>Email: {item.email}</div>
